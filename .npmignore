@@ -1,0 +1,15 @@
+images/
+styles/
+*.png
+*.jpg
+*.svg
+assets/
+docs/
+examples/
+CHANGELOG.md
+LICENSE
+.gitignore
+rm-ng-star-rating-*.tgz
+rm-ng-editor-*.tgz
+.idea/
+

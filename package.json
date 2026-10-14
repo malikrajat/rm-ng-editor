@@ -1,0 +1,140 @@
+{
+  "name": "@codewithrajat/rm-ng-editor",
+  "alias": [
+    "angular rich text editor",
+    "angular wysiwyg editor",
+    "angular table editor",
+    "angular spell check"
+  ],
+  "version": "1.0.0",
+  "description": "High-performance Angular rich text editor with tables, spell check, word count, media embed, and customizable toolbar. Declared peer range Angular 16-26 (built and verified on Angular 22), zoneless, standalone components, and tree-shaking. Zero external dependencies. Keyboard navigation and ARIA-labelled toolbar and content area.",
+  "keywords": [
+    "angular",
+    "angular-component",
+    "angular-signals",
+    "zoneless",
+    "standalone-component",
+    "ivy",
+    "aot",
+    "ssr",
+    "typescript",
+    "rich-text-editor",
+    "wysiwyg",
+    "contenteditable",
+    "html-editor",
+    "text-editor",
+    "toolbar",
+    "table-editor",
+    "table-tools",
+    "media-embed",
+    "youtube-embed",
+    "video-embed",
+    "spell-check",
+    "word-count",
+    "character-count",
+    "reading-time",
+    "link-preview",
+    "fullscreen-mode",
+    "distraction-free",
+    "accessibility",
+    "wcag",
+    "a11y",
+    "tree-shakable",
+    "zero-dependencies",
+    "lightweight",
+    "customizable",
+    "configurable",
+    "angular-library",
+    "blog-editor",
+    "cms",
+    "document-editor",
+    "form-editor",
+    "comment-editor",
+    "performance-optimized",
+    "signal-based"
+  ],
+  "author": {
+    "name": "Rajat Malik",
+    "email": "mr.rajatmalik@gmail.com",
+    "url": "https://www.rajatmalik.dev/"
+  },
+  "contributors": [
+    {
+      "name": "Rajat Malik",
+      "email": "mr.rajatmalik@gmail.com"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Rajat Malik",
+      "email": "mr.rajatmalik@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/malikrajat/rm-ng-editor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malikrajat/rm-ng-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/malikrajat/rm-ng-editor/issues",
+    "email": "mr.rajatmalik@gmail.com"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=16.0.0 <=26.0.0",
+    "@angular/core": ">=16.0.0 <=26.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/malikrajat"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "ng-add": {
+    "save": "dependencies"
+  },
+  "ng-update": {
+    "packageGroup": [
+      "@codewithrajat/rm-ng-editor"
+    ]
+  },
+  "directories": {
+    "lib": "./src",
+    "doc": "./docs"
+  },
+  "packageManager": "pnpm@10.11.1",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "private": false,
+  "preferGlobal": false,
+  "readme": "README.md",
+  "module": "fesm2022/codewithrajat-rm-ng-editor.mjs",
+  "typings": "types/codewithrajat-rm-ng-editor.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/codewithrajat-rm-ng-editor.d.ts",
+      "default": "./fesm2022/codewithrajat-rm-ng-editor.mjs"
+    }
+  }
+}
