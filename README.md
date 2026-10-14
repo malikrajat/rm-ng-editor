@@ -48,14 +48,14 @@
 
 <div align="center">
 
-  <img src="./assets/demo.png" alt="rm-ng-editor rich text editor: toolbar, formatted content, a table, an embedded video and the word-count status bar" width="880"/>
+  <img src="./assets/demo1.png" alt="rm-ng-editor rich text editor: toolbar, formatted content, a table, an embedded video and the word-count status bar" width="880"/>
 
   <p><em>A high-performance rich text editor with customizable toolbar, tables, media embedding, spell check, and more!</em></p>
 
   <details>
     <summary><strong>Dark theme</strong></summary>
 
-    <img src="./assets/editor-hero-dark.png" alt="The same rm-ng-editor layout rendered in the dark theme" width="880"/>
+    <img src="./assets/demo.png" alt="The same rm-ng-editor layout rendered in the dark theme" width="880"/>
 
   </details>
 
