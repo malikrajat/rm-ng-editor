@@ -38,6 +38,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Prettier (HTML/SCSS).
 - Documentation reviewed end to end and brought in line with the Angular 22
   workspace and the actual exported API.
+- **CI verification split into three parallel jobs.** The former `build-test` job
+  ran format, lint, typecheck, both builds and both test suites sequentially, so
+  the run took the sum of all of them and a lint failure hid whether the build or
+  the tests would have passed. `lint`, `build` and `test` are now separate jobs
+  that each declare `needs: guard`, so GitHub Actions runs them in parallel and
+  reports three independent checks.
 
 ### Fixed
 

@@ -427,14 +427,17 @@ the library also copies `README.md`, `CHANGELOG.md` and `LICENSE` into
 `dist/rm-ng-editor`. `build:all` is `pnpm run build:lib && ng build demo`.
 `typecheck` covers four tsconfigs: library, library specs, demo app, demo specs.
 
-CI pipeline (`.github/workflows/ci.yml`): jobs `guard` -> `build-test` ->
-`publish`. `build-test` runs install (frozen lockfile), Biome format check,
-Prettier check, Biome lint, ESLint, typecheck, `build:lib`, `build:demo`,
-`test:lib`, `test:demo`, uploads the `library-coverage` artifact, and runs
-`pnpm audit --audit-level high` as an advisory (non-failing) step. `publish`
-runs only for `v*` tags, requires the tag to equal the library version, and runs
-`npm publish ./dist/rm-ng-editor --provenance --access public` with
-`secrets.NPM_TOKEN`. CI also runs on pull requests that target `main`.
+CI pipeline (`.github/workflows/ci.yml`): a `guard` job enforces the branch
+policy, then three independent jobs run **in parallel**, each with `needs: guard`
+and its own checkout plus `pnpm install --frozen-lockfile`:
+
+- `lint` — Biome format check, Prettier check, Biome lint, ESLint, typecheck
+- `build` — `build:lib`, `build:demo`
+- `test` — `test:lib:ci`, `test:demo:ci`, uploads the `library-coverage` artifact,
+  and runs `pnpm audit --audit-level high` as an advisory (non-failing) step
+
+There is **no** `publish` job in the workflow file. CI runs on pushes to `main`,
+pull requests that target `main`, `v*` tags, and manual runs.
 
 Test runner: **Vitest** via `@angular/build:unit-test` (`runner: "vitest"`),
 `jsdom` environment, setup file `projects/rm-ng-editor/src/test-setup.ts` and a
